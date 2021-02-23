@@ -16,6 +16,6 @@ public class PingResource {
     @Path("pong/{id}")
     public String pong(@PathParam("id") Long id, @QueryParam("count") Long c, @QueryParam("func") Long f){
         return "przesłane id: " + id + " count: " + c + " func: " + f;
-    } 
+    }
 
 }
