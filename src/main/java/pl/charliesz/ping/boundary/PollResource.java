@@ -1,5 +1,8 @@
 package pl.charliesz.ping.boundary;
 import pl.charliesz.ping.model.PollDto;
+import pl.charliesz.ping.model.request.AddPollRequest;
+import pl.charliesz.ping.model.request.AnswerPollRequest;
+import pl.charliesz.ping.model.response.GetPollsResponse;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -15,14 +18,38 @@ public class PollResource {
     private static final Logger LOGGER = Logger.getLogger(PollResource.class.getName());
 
     @GET
-    public List<PollDto> getPolls(){
+    public GetPollsResponse getPolls(){
         LOGGER.info("GET: getPolls, została wywołana");
-        return Collections.emptyList();
+        return new GetPollsResponse(Collections.emptyList());
     }
 
     @POST
-    public void addPoll(PollDto poll){
-        LOGGER.info("POST: addPoll, question: "+poll.getQuestion());
-        PollDto newPoll = new PollDto(poll.getQuestion());
+    public void addPoll(AddPollRequest request){
+        LOGGER.info("POST: addPoll, question: "+request.getPoll().getQuestion() + " kolor: "+ request.getColor());
+        PollDto newPoll = new PollDto(request.getPoll().getQuestion());
+    }
+
+    @POST
+    @Path("{id}/answer")
+    public void answerPoll(@PathParam("id") Long id, AnswerPollRequest request){
+        LOGGER.info(String.format(" POST: answer - id=%s answer=%s", id, request.getAnswer()));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

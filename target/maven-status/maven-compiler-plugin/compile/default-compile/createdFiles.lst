@@ -1,4 +1,7 @@
+pl/charliesz/ping/model/request/AddPollRequest.class
+pl/charliesz/ping/boundary/PingResource.class
+pl/charliesz/ping/model/response/GetPollsResponse.class
 pl/charliesz/ping/boundary/PollResource.class
 pl/charliesz/ping/model/PollDto.class
 pl/charliesz/JAXRSConfiguration.class
-pl/charliesz/ping/boundary/PingResource.class
+pl/charliesz/ping/model/request/AnswerPollRequest.class
