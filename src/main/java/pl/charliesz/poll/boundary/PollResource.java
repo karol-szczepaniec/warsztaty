@@ -1,13 +1,12 @@
-package pl.charliesz.ping.boundary;
-import pl.charliesz.ping.model.PollDto;
-import pl.charliesz.ping.model.request.AddPollRequest;
-import pl.charliesz.ping.model.request.AnswerPollRequest;
-import pl.charliesz.ping.model.response.GetPollsResponse;
+package pl.charliesz.poll.boundary;
+import pl.charliesz.poll.model.PollDto;
+import pl.charliesz.poll.model.request.AddPollRequest;
+import pl.charliesz.poll.model.request.AnswerPollRequest;
+import pl.charliesz.poll.model.response.GetPollsResponse;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.Collections;
-import java.util.List;
 import java.util.logging.Logger;
 
 @Path("poll")

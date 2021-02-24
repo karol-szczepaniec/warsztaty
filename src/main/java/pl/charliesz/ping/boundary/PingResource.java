@@ -1,6 +1,5 @@
 package pl.charliesz.ping.boundary;
 
-import javax.inject.Inject;
 import javax.ws.rs.*;
 
 

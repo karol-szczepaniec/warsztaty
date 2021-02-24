@@ -1,4 +1,4 @@
-package pl.charliesz.ping.model.request;
+package pl.charliesz.poll.model.request;
 
 public class AnswerPollRequest {
     private String answer;

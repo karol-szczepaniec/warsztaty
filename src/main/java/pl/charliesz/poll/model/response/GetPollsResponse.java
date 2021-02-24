@@ -1,5 +1,5 @@
-package pl.charliesz.ping.model.response;
-import pl.charliesz.ping.model.PollDto;
+package pl.charliesz.poll.model.response;
+import pl.charliesz.poll.model.PollDto;
 import java.util.List;
 
 public class GetPollsResponse {

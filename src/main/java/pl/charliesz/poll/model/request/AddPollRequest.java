@@ -1,6 +1,6 @@
-package pl.charliesz.ping.model.request;
+package pl.charliesz.poll.model.request;
 
-import pl.charliesz.ping.model.PollDto;
+import pl.charliesz.poll.model.PollDto;
 
 public class AddPollRequest {
     private PollDto poll;

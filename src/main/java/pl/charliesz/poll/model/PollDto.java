@@ -1,4 +1,4 @@
-package pl.charliesz.ping.model;
+package pl.charliesz.poll.model;
 
 public class PollDto {
     private String question;
