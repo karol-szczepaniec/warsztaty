@@ -3,9 +3,11 @@ import pl.charliesz.poll.model.PollDto;
 import pl.charliesz.poll.model.request.AddPollRequest;
 import pl.charliesz.poll.model.request.AnswerPollRequest;
 import pl.charliesz.poll.model.response.GetPollsResponse;
+import sun.security.validator.ValidatorException;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.Collections;
 import java.util.logging.Logger;
 
@@ -23,9 +25,15 @@ public class PollResource {
     }
 
     @POST
-    public void addPoll(AddPollRequest request){
+    public Response addPoll(AddPollRequest request){
         LOGGER.info("POST: addPoll, question: "+request.getPoll().getQuestion() + " kolor: "+ request.getColor());
+        // Wyrzucenie wyjątku:
+        if(request.getPoll().getQuestion() == null){
+            return Response.status(Response.Status.BAD_REQUEST).entity("Question_nie_może_być_null").build();
+        }
         PollDto newPoll = new PollDto(request.getPoll().getQuestion());
+
+        return Response.noContent().build();
     }
 
     @POST
