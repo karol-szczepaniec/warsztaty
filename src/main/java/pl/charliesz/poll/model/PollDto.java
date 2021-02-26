@@ -1,6 +1,10 @@
 package pl.charliesz.poll.model;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 public class PollDto {
+    @NotBlank
     private String question;
     private Long id;
 

@@ -2,7 +2,12 @@ package pl.charliesz.poll.model.request;
 
 import pl.charliesz.poll.model.PollDto;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+
 public class AddPollRequest {
+    @Valid
+    @NotBlank
     private PollDto poll;
     private String color;
 
