@@ -1,6 +1,7 @@
 /home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/poll/model/request/AnswerPollRequest.java
 /home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/ping/boundary/PingResource.java
 /home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/poll/boundary/PollResource.java
+/home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/poll/fasade/AddPollFasade.java
 /home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/JAXRSConfiguration.java
 /home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/poll/model/response/GetPollsResponse.java
 /home/charlie_sz/Pulpit/PAW_all/jsf_po_kolei/2_warsztaty_rest_api/warsztaty/src/main/java/pl/charliesz/poll/service/AddPollService.java

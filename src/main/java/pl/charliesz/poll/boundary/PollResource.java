@@ -4,14 +4,12 @@ import pl.charliesz.poll.model.request.AddPollRequest;
 import pl.charliesz.poll.model.request.AnswerPollRequest;
 import pl.charliesz.poll.model.response.GetPollsResponse;
 import pl.charliesz.poll.service.AddPollService;
-import sun.security.validator.ValidatorException;
 
 import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.Collections;
 import java.util.logging.Logger;
 

@@ -6,3 +6,4 @@ pl/charliesz/JAXRSConfiguration.class
 pl/charliesz/poll/model/request/AnswerPollRequest.class
 pl/charliesz/poll/model/response/GetPollsResponse.class
 pl/charliesz/poll/boundary/PollResource.class
+pl/charliesz/poll/fasade/AddPollFasade.class

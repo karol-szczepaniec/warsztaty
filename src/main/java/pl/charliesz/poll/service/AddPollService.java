@@ -13,10 +13,12 @@ public class AddPollService {
 
     public void addPoll(PollDto poll){
         LOGGER.info("Before ensuring '?' : "+ poll.getQuestion());
-        if (poll.getQuestion().charAt(poll.getQuestion().length()-1) != '?') {
+        if (poll.getQuestion().charAt(poll.getQuestion().length()) != '?') {
 
             poll.setQuestion(poll.getQuestion() + '?');
         }
         LOGGER.info("After ensuring '?' : " + poll.getQuestion());
+
+        //TODO wywołanie fasade, wpisanie ankiety
     }
 }
