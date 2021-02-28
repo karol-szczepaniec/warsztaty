@@ -3,8 +3,10 @@ import pl.charliesz.poll.model.PollDto;
 import pl.charliesz.poll.model.request.AddPollRequest;
 import pl.charliesz.poll.model.request.AnswerPollRequest;
 import pl.charliesz.poll.model.response.GetPollsResponse;
+import pl.charliesz.poll.service.AddPollService;
 import sun.security.validator.ValidatorException;
 
+import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
@@ -20,6 +22,8 @@ public class PollResource {
 
     private static final Logger LOGGER = Logger.getLogger(PollResource.class.getName());
 
+    @Inject AddPollService addPollService;
+
     @GET
     public GetPollsResponse getPolls(){
         LOGGER.info("GET: getPolls, została wywołana");
@@ -29,7 +33,8 @@ public class PollResource {
     @POST
     public void addPoll(@Valid @NotNull AddPollRequest request){
         LOGGER.info("POST: addPoll, question: "+request.getPoll().getQuestion() + " kolor: "+ request.getColor());
-        PollDto newPoll = new PollDto(request.getPoll().getQuestion());
+
+        addPollService.addPoll(request.getPoll());
     }
 
     @POST

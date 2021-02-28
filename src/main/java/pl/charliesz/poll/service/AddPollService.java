@@ -12,10 +12,9 @@ public class AddPollService {
     private static final Logger LOGGER = Logger.getLogger(AddPollService.class.getName());
 
     public void addPoll(PollDto poll){
-        // Sprawdzam czy ostatni znak to pytajnik
         LOGGER.info("Before ensuring '?' : "+ poll.getQuestion());
         if (poll.getQuestion().charAt(poll.getQuestion().length()-1) != '?') {
-            // jeśli nie to dopisuję pytajnik
+
             poll.setQuestion(poll.getQuestion() + '?');
         }
         LOGGER.info("After ensuring '?' : " + poll.getQuestion());

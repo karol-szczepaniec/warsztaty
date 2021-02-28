@@ -4,7 +4,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class PollDto {
-    @NotBlank
+    @NotNull
     private String question;
     private Long id;
 

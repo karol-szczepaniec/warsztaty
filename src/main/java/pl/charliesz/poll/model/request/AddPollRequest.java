@@ -4,10 +4,11 @@ import pl.charliesz.poll.model.PollDto;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class AddPollRequest {
     @Valid
-    @NotBlank
+    @NotNull
     private PollDto poll;
     private String color;
 
